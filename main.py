@@ -40,8 +40,8 @@ class WeatherApp:
         # Indicador de carga
         self.loading = ft.ProgressRing(visible=False)
 
-        # Mensaje de error
-        self.error_mesagge = ft.Text(
+        # Mensaje de error - CORREGIDO: error_message en lugar de error_mesagge
+        self.error_message = ft.Text(
             "",
             color=ft.Colors.RED,
             text_align=ft.TextAlign.CENTER,
@@ -59,7 +59,7 @@ class WeatherApp:
                     alignment=ft.alignment.center,
                     height=50
                 ),
-                self.error_message,
+                self.error_message,  # CORREGIDO: ahora coincide con el nombre del atributo
                 self.weather_card,
             ],
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
